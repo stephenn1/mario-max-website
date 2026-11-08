@@ -1,0 +1,140 @@
+export const home = {
+  meta: {
+    title: "Mario-Max German Language School | Learn German in Kubwa, Abuja",
+    description:
+      "Learn German at Mario-Max German Language School Nig Ltd. in Kubwa, Abuja, Nigeria. Explore German language courses and Goethe examination preparation.",
+  },
+  hero: {
+    badge: "German language school · Kubwa, Abuja",
+    title: "Your journey to German starts here.",
+    lead: "Learn German, develop new skills and open doors to international opportunities.",
+    primary: "Explore our courses",
+    secondary: "Contact us",
+    cardGreeting: "Guten Tag!",
+    cardArticles: "der · die · das",
+    cardLevels: "Willkommen · A1–C2",
+  },
+  welcome: {
+    eyebrow: "Willkommen · Welcome",
+    title: "A welcoming place to begin your German journey",
+    p1: "Mario-Max German Language School Nig Ltd. in Kubwa, Abuja, teaches German and prepares students for the Goethe German examinations.",
+    p2: "Whether you are preparing to study, train or work in Germany, or simply learning for yourself, contact the school to talk about your goals and find the right starting level.",
+    cta: "About the school",
+    facts: [
+      { title: "German teaching", text: "From your first words" },
+      { title: "Goethe prep", text: "Exam preparation" },
+      { title: "Mon–Sat", text: "7:30 AM – 8:00 PM" },
+    ],
+  },
+  courses: {
+    eyebrow: "German courses",
+    title: "A clear path through the CEFR levels",
+    lead: "German is learned in six CEFR levels, from your first greeting to proficient German — and the Goethe examinations follow the same levels.",
+    mobileLead: "Swipe to browse the six CEFR levels.",
+    details: "Course details",
+    viewAll: "View all courses & FAQs",
+    swipeHint: "Swipe for more levels",
+  },
+  why: {
+    eyebrow: "Why Mario-Max",
+    title: "What Mario-Max offers",
+    lead: "German language teaching and Goethe examination preparation in Kubwa, Abuja — with free resources to help you keep practising.",
+    items: [
+      {
+        icon: "chart",
+        title: "Clear CEFR pathway",
+        text: "The CEFR levels from A1 to C2 give every learner a clear next milestone.",
+      },
+      {
+        icon: "award",
+        title: "Goethe exam preparation",
+        text: "Preparation for the internationally recognised Goethe German examinations.",
+      },
+      {
+        icon: "compass",
+        title: "Help choosing a level",
+        text: "Not sure where to start? Contact the school to discuss the right level for you.",
+      },
+      {
+        icon: "globe",
+        title: "A window to Germany",
+        text: "Our Germany Guide explains study, Ausbildung, work and everyday life — and how German fits in.",
+      },
+      {
+        icon: "fileText",
+        title: "Free learning resources",
+        text: "Vocabulary, grammar, quizzes and flashcards to keep practising at home.",
+      },
+      {
+        icon: "mapPin",
+        title: "Located in Kubwa",
+        text: "Blue and Yellow Plaza, Gado Nasko Road. Open Monday to Saturday, 7:30 AM – 8:00 PM.",
+      },
+    ],
+  },
+  resources: {
+    eyebrow: "Learning resources",
+    title: "Keep practising, anytime",
+    lead: "Free tools to build your German between lessons — vocabulary, grammar, pronunciation and more.",
+    items: [
+      { key: "vocabulary", title: "Vocabulary", text: "Word lists & themes" },
+      { key: "grammar", title: "Grammar", text: "Rules made simple" },
+      { key: "pronunciation", title: "Pronunciation", text: "Sounds & stress" },
+      { key: "conversations", title: "Conversations", text: "Everyday German" },
+      { key: "reading", title: "Reading & Writing", text: "Texts & practice" },
+      { key: "listening", title: "Listening & Speaking", text: "Listen and speak" },
+      { key: "quizzes", title: "Quizzes", text: "Test yourself" },
+      { key: "flashcards", title: "Flashcards", text: "Build memory" },
+    ],
+  },
+  opportunities: {
+    eyebrow: "Opportunities in Germany",
+    title: "Where German can take you",
+    lead: "Educational, informational guidance on studying, training, working and living in Germany. We are a language school — not an immigration or legal advisory service.",
+    cards: [
+      {
+        key: "study",
+        tag: "Study",
+        title: "Studying in Germany",
+        text: "Universities, programmes and how language fits into your study plans.",
+      },
+      {
+        key: "ausbildung",
+        tag: "Training",
+        title: "Ausbildung",
+        text: "Understand vocational training pathways and the German you'll need.",
+      },
+      {
+        key: "work",
+        tag: "Work",
+        title: "Working in Germany",
+        text: "How language supports your career goals and workplace communication.",
+      },
+      {
+        key: "culture",
+        tag: "Culture",
+        title: "Culture & lifestyle",
+        text: "Customs, everyday habits and the cultural context behind the language.",
+      },
+      {
+        key: "living",
+        tag: "Living",
+        title: "Living in Germany",
+        text: "Daily life essentials and the practical German that makes settling easier.",
+      },
+    ],
+    exploreTitle: "Explore the full guide",
+    exploreCta: "Open Germany Guide",
+  },
+  news: {
+    eyebrow: "News & articles",
+    title: "Latest from Mario-Max",
+    all: "All articles",
+  },
+  cta: {
+    title: "Ready to begin learning German?",
+    lead: "Talk to us about courses, schedules and getting started. We're happy to help you find the right level.",
+    primary: "Contact the school",
+    secondary: "Chat on WhatsApp",
+  },
+};

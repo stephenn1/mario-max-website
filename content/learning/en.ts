@@ -1,0 +1,447 @@
+import type { LearningContent } from "./types";
+import * as w from "./words";
+
+/**
+ * English learning content. Educational material for beginners —
+ * not official Goethe examination material. To be reviewed by the school's teachers.
+ */
+export const learningEn: LearningContent = {
+  columns: {
+    german: "German",
+    meaning: "English",
+    note: "Note",
+    sound: "Sound",
+    example: "Example",
+    tip: "How it sounds",
+  },
+  glossaryTitle: "Useful words",
+  notes: {
+    informal: "informal",
+    formal: "formal",
+    plural: "plural",
+    pluralInformal: "plural, informal",
+    formalSie: "Sie = formal “you”",
+    masculine: "masculine",
+    feminine: "feminine",
+    neuter: "neuter",
+    normalOrder: "normal word order",
+    verbEnd: "verb goes to the end",
+  },
+  topics: [
+    {
+      slug: "vocabulary",
+      icon: "book",
+      title: "Vocabulary",
+      summary: "Themed word lists and everyday German vocabulary.",
+      lead: "Build your word bank with themed lists for beginners — greetings, numbers, days, family and the classroom. Learn every noun together with its article.",
+      keywords: ["words", "word lists", "greetings", "numbers", "days", "family", "classroom", "a1"],
+      blocks: [
+        { type: "words", id: "greetings", title: "Greetings & basics", rows: w.greetings, speak: true },
+        { type: "words", id: "numbers", title: "Numbers", rows: w.numbers, speak: true },
+        { type: "words", id: "days", title: "Days of the week", rows: w.days, speak: true },
+        { type: "words", id: "family", title: "Family", rows: w.family, speak: true },
+        { type: "words", id: "classroom", title: "In the classroom", rows: w.classroom, speak: true },
+        { type: "flashcards", id: "flashcards", title: "Practise with flashcards", deckId: "classroom" },
+        { type: "quiz", id: "quiz", title: "Check your vocabulary", setId: "vocabulary" },
+      ],
+    },
+    {
+      slug: "grammar",
+      icon: "fileText",
+      title: "Grammar",
+      summary: "Clear explanations of German grammar, made simple.",
+      lead: "The foundations of German grammar for beginners: articles and gender, the verbs sein and haben, regular verbs and word order.",
+      keywords: ["grammar", "articles", "der die das", "gender", "verbs", "sein", "haben", "word order"],
+      blocks: [
+        {
+          type: "text",
+          id: "articles",
+          title: "Nouns and articles: der, die, das",
+          paragraphs: [
+            "Every German noun has a grammatical gender: masculine (der), feminine (die) or neuter (das). In the plural, the article is always die.",
+            "German nouns are always written with a capital letter — even in the middle of a sentence.",
+          ],
+        },
+        { type: "words", title: "Examples", rows: w.articleExamples, speak: true },
+        {
+          type: "list",
+          title: "Helpful patterns",
+          items: [
+            "Nouns ending in -ung, -heit, -keit, -schaft and -ion are feminine: die Zeitung, die Freiheit.",
+            "Nouns ending in -chen and -lein are neuter: das Mädchen, das Brötchen.",
+            "Days, months and seasons are masculine: der Montag, der Mai, der Sommer.",
+            "There are many exceptions — always learn each noun together with its article.",
+          ],
+        },
+        { type: "quiz", id: "articles-quiz", title: "Practise der, die, das", setId: "articles" },
+        { type: "words", id: "sein", title: "The verb sein (to be)", rows: w.sein, speak: true },
+        { type: "words", id: "haben", title: "The verb haben (to have)", rows: w.haben, speak: true },
+        {
+          type: "words",
+          id: "regular-verbs",
+          title: "Regular verbs: wohnen (to live)",
+          intro: "Most regular verbs follow this pattern: take the stem (wohn-) and add the endings -e, -st, -t, -en, -t, -en.",
+          rows: w.wohnen,
+          speak: true,
+        },
+        {
+          type: "text",
+          id: "word-order",
+          title: "Word order: the verb comes second",
+          paragraphs: [
+            "In a German statement, the conjugated verb is the second element. If the sentence starts with something other than the subject — such as a time expression — the subject moves to the position after the verb.",
+          ],
+        },
+        { type: "words", title: "Examples", rows: w.wordOrder, speak: true },
+      ],
+    },
+    {
+      slug: "pronunciation",
+      icon: "mic",
+      title: "Pronunciation",
+      summary: "Sounds, stress and tips for speaking clearly.",
+      lead: "German spelling is quite regular: once you know how letters and letter combinations sound, you can read most words aloud. Use the Listen buttons to hear each example.",
+      keywords: ["pronunciation", "sounds", "umlaut", "ä ö ü", "ß", "stress", "speaking", "accent"],
+      blocks: [
+        {
+          type: "sounds",
+          id: "sounds",
+          title: "Key German sounds",
+          rows: [
+            { sound: "ä", example: "Mädchen", tip: "Like the “e” in “bed”" },
+            { sound: "ö", example: "schön", tip: "Say “e” (as in “bed”) with rounded lips" },
+            { sound: "ü", example: "über", tip: "Say “ee” with rounded lips" },
+            { sound: "ß", example: "Straße", tip: "A sharp “s”, as in “kiss”" },
+            { sound: "ei", example: "mein", tip: "Like “eye”" },
+            { sound: "ie", example: "Liebe", tip: "Like “ee” in “see”" },
+            { sound: "eu / äu", example: "heute", tip: "Like “oy” in “boy”" },
+            { sound: "ch", example: "ich", tip: "Soft after e and i, like a whispered “h” in “huge”" },
+            { sound: "ch", example: "acht", tip: "Further back in the throat after a, o and u" },
+            { sound: "sch", example: "Schule", tip: "Like “sh”" },
+            { sound: "sp / st", example: "Sport", tip: "At the start of a word: “shp” / “sht”" },
+            { sound: "w", example: "Wasser", tip: "Like English “v”" },
+            { sound: "v", example: "Vater", tip: "Usually like English “f”" },
+            { sound: "z", example: "Zeit", tip: "Like “ts” in “cats”" },
+            { sound: "j", example: "ja", tip: "Like English “y”" },
+          ],
+        },
+        {
+          type: "list",
+          id: "stress",
+          title: "Stress and endings",
+          items: [
+            "Word stress usually falls on the first syllable: Montag, Lehrer, Fenster.",
+            "Verbs with the prefixes be-, ver- and ge- are stressed after the prefix: bezahlen, verstehen.",
+            "At the end of a word, b, d and g sound like p, t and k: gelb, Hund, Tag.",
+          ],
+        },
+      ],
+    },
+    {
+      slug: "everyday-expressions",
+      icon: "message",
+      title: "Everyday expressions",
+      summary: "Useful phrases and everyday German dialogues.",
+      lead: "Phrases you can use straight away — for introducing yourself, asking for help in class and getting around.",
+      keywords: ["phrases", "expressions", "greetings", "introductions", "conversation", "dialogue", "everyday"],
+      blocks: [
+        { type: "words", id: "introductions", title: "Introducing yourself", rows: w.introductions, speak: true },
+        { type: "words", id: "in-class", title: "When you don't understand", rows: w.understanding, speak: true },
+        { type: "words", id: "out-and-about", title: "Out and about", rows: w.outAndAbout, speak: true },
+        { type: "flashcards", id: "flashcards", title: "Practise greetings", deckId: "greetings" },
+        { type: "quiz", id: "quiz", title: "Check the phrases", setId: "phrases" },
+      ],
+    },
+    {
+      slug: "reading",
+      icon: "bookText",
+      title: "Reading",
+      summary: "Short texts graded by level, with practice.",
+      lead: "Short German texts for beginners, with useful words and questions to check your understanding. Read each text twice: once for the main idea, then for detail.",
+      keywords: ["reading", "texts", "comprehension", "a1", "a2", "story"],
+      blocks: [
+        {
+          type: "reading",
+          id: "a1",
+          title: "Ich lerne Deutsch",
+          level: "A1",
+          paragraphs: w.readingA1Text,
+          glossary: w.readingA1Glossary,
+          quizSetId: "reading-a1",
+        },
+        {
+          type: "reading",
+          id: "a2",
+          title: "Mein Wochenende",
+          level: "A2",
+          paragraphs: w.readingA2Text,
+          glossary: w.readingA2Glossary,
+          quizSetId: "reading-a2",
+        },
+      ],
+    },
+    {
+      slug: "writing",
+      icon: "pen",
+      title: "Writing",
+      summary: "Prompts and models to build writing skills.",
+      lead: "Writing helps you organise what you know. Start with short sentences, use connecting words, and check your text with the list below.",
+      keywords: ["writing", "prompts", "email", "model text", "connectors", "sentences"],
+      blocks: [
+        {
+          type: "prompts",
+          id: "prompts",
+          title: "Writing prompts",
+          groups: [
+            {
+              level: "A1",
+              items: [
+                "Introduce yourself in 4–5 sentences: your name, where you come from, where you live and your hobbies.",
+                "Write a short list of what is in your room, with the article for each noun.",
+              ],
+            },
+            {
+              level: "A2",
+              items: [
+                "Write a short email to a friend about your weekend (60–80 words).",
+                "Describe your daily routine from morning to evening.",
+              ],
+            },
+            {
+              level: "B1",
+              items: [
+                "Why are you learning German? Give at least two reasons, using weil or denn.",
+                "Write about the advantages and disadvantages of learning a language online.",
+              ],
+            },
+          ],
+        },
+        {
+          type: "reading",
+          id: "model",
+          title: "Model text: Über mich",
+          level: "A1",
+          paragraphs: w.modelTextA1,
+        },
+        { type: "words", id: "connectors", title: "Useful connecting words", rows: w.connectors, speak: true },
+        {
+          type: "list",
+          id: "checklist",
+          title: "Check your text",
+          items: [
+            "Do all nouns start with a capital letter?",
+            "Is the verb in second position in each statement?",
+            "After weil, does the verb go to the end of the clause?",
+            "Have you used the correct verb endings (ich wohne, du wohnst …)?",
+          ],
+        },
+      ],
+    },
+    {
+      slug: "listening-speaking",
+      icon: "headphones",
+      title: "Listening & speaking",
+      summary: "Listening practice and speaking prompts.",
+      lead: "Listen to everyday phrases, repeat them aloud and practise speaking with prompts for different levels.",
+      keywords: ["listening", "speaking", "audio", "prompts", "talking about your week", "conversation", "shadowing"],
+      blocks: [
+        {
+          type: "words",
+          id: "listen",
+          title: "Listen and repeat",
+          intro: "Press Listen, then repeat each phrase aloud. Try to copy the rhythm and melody.",
+          rows: w.introductions,
+          speak: true,
+        },
+        {
+          type: "prompts",
+          id: "prompts",
+          title: "Speaking prompts",
+          groups: [
+            {
+              level: "A1",
+              items: [
+                "Introduce yourself: your name, where you're from and where you live (Ich heiße … Ich komme aus … Ich wohne in …).",
+                "Count from one to twenty out loud.",
+                "Name five objects in your room — with their articles.",
+              ],
+            },
+            {
+              level: "A2",
+              items: [
+                "Describe your daily routine from morning to evening.",
+                "Say what you did last weekend (Am Samstag habe ich …).",
+              ],
+            },
+            {
+              level: "B1",
+              items: [
+                "Talking about your week: describe what you did on Monday, midweek and at the weekend.",
+                "Explain why you are learning German, using weil or denn.",
+                "Compare this week with a typical week last year.",
+              ],
+            },
+          ],
+        },
+        {
+          type: "list",
+          id: "tips",
+          title: "Tips for speaking practice",
+          items: [
+            "Shadowing: play a short audio clip, pause after each sentence and repeat it.",
+            "Record yourself, listen back and choose one thing to improve.",
+            "Speak out loud — even a few minutes a day makes a difference.",
+          ],
+        },
+      ],
+    },
+    {
+      slug: "learning-tips",
+      icon: "lightbulb",
+      title: "Learning tips",
+      summary: "Practical habits and study tips for learning German.",
+      lead: "Small, steady habits make the biggest difference. These tips help you keep learning between lessons.",
+      keywords: ["tips", "habits", "study", "motivation", "learning", "memory"],
+      blocks: [
+        {
+          type: "list",
+          id: "tips",
+          title: "Habits that help",
+          items: [
+            "Practise a little every day rather than a lot once a week.",
+            "Learn new words in short phrases, not in isolation.",
+            "Review with flashcards: after a day, then a few days, then a week.",
+            "Speak from the start — mistakes are part of learning.",
+            "Choose practice you enjoy: songs, videos, stories and games all count.",
+          ],
+        },
+        { type: "articles", id: "articles", title: "Read our learning-tip articles", category: "learning-tips" },
+      ],
+    },
+  ],
+  practice: [
+    {
+      level: "A1",
+      title: "Everyday greetings & introductions",
+      type: "Short practice set",
+      href: "/resources/everyday-expressions",
+      keywords: ["greetings", "introductions", "phrases", "speaking"],
+    },
+    {
+      level: "A1",
+      title: "Der, die, das — article practice",
+      type: "Grammar drill",
+      href: "/resources/grammar#articles",
+      keywords: ["articles", "grammar", "der die das", "gender"],
+    },
+    {
+      level: "B1",
+      title: "Talking about your week",
+      type: "Speaking prompts",
+      href: "/resources/listening-speaking#prompts",
+      keywords: ["speaking", "prompts", "conversation", "week"],
+    },
+    {
+      level: "A2",
+      title: "Reading: a short German text",
+      type: "Reading practice",
+      href: "/resources/reading#a2",
+      keywords: ["reading", "text", "comprehension"],
+    },
+  ],
+  quizzes: [
+    {
+      id: "vocabulary",
+      title: "Vocabulary",
+      questions: [
+        { prompt: "What does “danke” mean?", options: ["Thank you", "Please", "Sorry", "Goodbye"], answer: 0 },
+        { prompt: "What does “Tschüss” mean?", options: ["Hello", "Bye", "Good night", "Yes"], answer: 1 },
+        { prompt: "What does “der Tisch” mean?", options: ["the chair", "the door", "the table", "the window"], answer: 2 },
+        { prompt: "What does “Guten Morgen” mean?", options: ["Good evening", "Good night", "Good day", "Good morning"], answer: 3 },
+        { prompt: "What does “die Tür” mean?", options: ["the door", "the board", "the book", "the pen"], answer: 0 },
+        { prompt: "What is “Wednesday” in German?", options: ["Montag", "Mittwoch", "Donnerstag", "Sonntag"], answer: 1 },
+      ],
+    },
+    {
+      id: "articles",
+      title: "der, die, das",
+      questions: [
+        { prompt: "Which article goes with “Tisch” (table)?", options: ["der", "die", "das"], answer: 0 },
+        { prompt: "Which article goes with “Lampe” (lamp)?", options: ["der", "die", "das"], answer: 1 },
+        { prompt: "Which article goes with “Buch” (book)?", options: ["der", "die", "das"], answer: 2 },
+        { prompt: "Which article goes with “Mädchen” (girl)? Tip: -chen", options: ["der", "die", "das"], answer: 2 },
+        { prompt: "Which article goes with “Zeitung” (newspaper)? Tip: -ung", options: ["der", "die", "das"], answer: 1 },
+        { prompt: "Which article goes with “Montag” (Monday)?", options: ["der", "die", "das"], answer: 0 },
+      ],
+    },
+    {
+      id: "phrases",
+      title: "Everyday phrases",
+      questions: [
+        { prompt: "How do you say “My name is …”?", options: ["Ich komme aus …", "Ich heiße …", "Ich wohne in …", "Ich habe …"], answer: 1 },
+        { prompt: "What does “Wie geht es Ihnen?” mean?", options: ["Where are you from?", "What is your name?", "How are you?", "What time is it?"], answer: 2 },
+        { prompt: "How do you ask someone to repeat something?", options: ["Können Sie das bitte wiederholen?", "Was kostet das?", "Die Rechnung, bitte.", "Freut mich!"], answer: 0 },
+        { prompt: "What does “Ich verstehe das nicht” mean?", options: ["I don't understand that.", "I don't like that.", "I don't have that.", "I'm not from here."], answer: 0 },
+        { prompt: "How do you ask for the bill in a café?", options: ["Wo ist der Bahnhof?", "Ich hätte gern einen Kaffee.", "Die Rechnung, bitte.", "Wie spät ist es?"], answer: 2 },
+      ],
+    },
+    {
+      id: "reading-a1",
+      title: "Ich lerne Deutsch",
+      questions: [
+        { prompt: "Where does Amaka live?", options: ["In Lagos", "In Abuja", "In Berlin", "In Kano"], answer: 1 },
+        { prompt: "Why is Amaka learning German?", options: ["She wants to study in Germany.", "Her family is German.", "She works in Germany.", "She is a German teacher."], answer: 0 },
+        { prompt: "What does she do every morning?", options: ["She watches a film.", "She writes a letter.", "She drinks tea and learns ten new words.", "She goes to the market."], answer: 2 },
+        { prompt: "What does she do in the evening?", options: ["She reads a book.", "She listens to German music.", "She plays football.", "She cooks with friends."], answer: 1 },
+      ],
+    },
+    {
+      id: "reading-a2",
+      title: "Mein Wochenende",
+      questions: [
+        { prompt: "How did the writer travel to the market?", options: ["On foot", "By car", "By bus", "By train"], answer: 2 },
+        { prompt: "Who visited on Saturday afternoon?", options: ["Her friend Chiamaka", "Her teacher", "Her brother", "Nobody"], answer: 0 },
+        { prompt: "What did the writer do on Sunday?", options: ["She went to the market.", "She stayed at home, read and studied.", "She travelled to Lagos.", "She visited her family."], answer: 1 },
+      ],
+    },
+  ],
+  decks: [
+    {
+      id: "greetings",
+      title: "Greetings",
+      cards: [
+        { front: "Hallo", back: "Hello" },
+        { front: "Guten Morgen", back: "Good morning" },
+        { front: "Danke", back: "Thank you" },
+        { front: "Bitte", back: "Please / You're welcome" },
+        { front: "Entschuldigung", back: "Excuse me / Sorry" },
+        { front: "Tschüss", back: "Bye" },
+      ],
+    },
+    {
+      id: "classroom",
+      title: "Classroom objects",
+      cards: [
+        { front: "der Tisch", back: "the table" },
+        { front: "der Stuhl", back: "the chair" },
+        { front: "die Tür", back: "the door" },
+        { front: "das Buch", back: "the book" },
+        { front: "das Fenster", back: "the window" },
+        { front: "der Stift", back: "the pen" },
+      ],
+    },
+    {
+      id: "days",
+      title: "Days of the week",
+      cards: [
+        { front: "Montag", back: "Monday" },
+        { front: "Dienstag", back: "Tuesday" },
+        { front: "Mittwoch", back: "Wednesday" },
+        { front: "Donnerstag", back: "Thursday" },
+        { front: "Freitag", back: "Friday" },
+        { front: "Samstag", back: "Saturday" },
+        { front: "Sonntag", back: "Sunday" },
+      ],
+    },
+  ],
+};
